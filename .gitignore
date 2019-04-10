@@ -1,0 +1,12 @@
+node_modules/
+vendor/
+wp/*
+!wp/wp-content
+wp/wp-content/*
+!wp/wp-content/themes
+wp/wp-content/themes/*
+!wp/wp-content/themes/understrap
+!wp/wp-content/themes/marchelo
+!wp/wp-content/plugins/
+wp/wp-content/plugins/hello.php
+wp/wp-content/plugins/akismet

@@ -1,0 +1,566 @@
+html, body {
+  font-family: Comfortaa, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+}
+
+.bg-teal {
+  background-color: teal;
+}
+
+.color-teal {
+  color: teal;
+}
+
+.entry-header {
+  > h1, h2, h3 {
+    color: $white;
+    background-color: teal;
+    font-family: Comfortaa, sans-serif;
+    font-size: $h4-font-size;
+    letter-spacing: 4px;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: center;
+    text-transform: lowercase;
+    width: 100%;
+  }
+}
+
+.ff-beyond-infinity {
+  font-family: "Beyond Infinity", sans-serif;
+}
+
+.ff-comfortaa {
+  font-family: Comfortaa, sans-serif;
+  font-weight: 400;
+}
+
+.ff-raleway {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.ls-4 {
+  letter-spacing: 4px;
+}
+
+.ls-8 {
+  letter-spacing: 8px;
+}
+
+.home-carousel {
+  &__item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-content {
+      height: 20rem;
+      position: relative;
+      .display-1 {
+        font-size: 4rem;
+      }
+      .display-3 {
+        font-size: 2.5rem;
+        margin-top: -2rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        height: 32rem;
+
+        .display-1 {
+          font-size: 8rem;
+        }
+        .display-3 {
+          font-size: 4.5rem;
+          margin-top: -3.5rem;
+        }
+      }
+    }
+
+    &--one {
+      background-image: url(/wp-content/themes/marchelo/img//category-panaderia.png);
+    }
+  
+    &--two {
+      background-image: url(/wp-content/themes/marchelo/img//category-pasteleria.png);
+    }
+  
+    &--three {
+      background-image: url(/wp-content/themes/marchelo/img//category-dulces.png);
+    }
+  
+    &--four {
+      background-image: url(/wp-content/themes/marchelo/img//category-salados.png);
+    }
+  }
+}
+
+.categories {
+  position: relative;
+
+  &__link {
+    color: $black;
+    display: block;
+    font-family: 'Beyond Infinity', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  &__link,
+  &__photo {
+    transform: scale(1);
+    transition: .5s ease-in-out;
+  }
+
+  &__title {
+    text-align: center;
+    width: 100%;
+  }
+
+  &:hover {
+    &__photo,
+    &__link {
+      transform: scale(1.2);
+      transition: .5s ease-in-out;
+    }
+  }
+}
+
+.contact {
+  height: 32rem;
+  position: relative;
+}
+
+.events {
+  &-price {
+    color: teal;
+  }
+
+  &-subtitle {
+    color: teal;
+    font-family: Comfortaa, sans-serif;
+  }
+
+  &-list {
+    li > span {
+      color: teal;
+    }
+  }
+
+  &-p {
+    color: teal;
+  }
+}
+
+.how2buy {
+  min-height: 20rem;
+  position: relative;
+}
+
+.mark, mark {
+  color: $secondary;
+  background-color: rgba($secondary, 0.05);
+}
+
+.our-events {
+  background-image: url(/wp-content/themes/marchelo/img//home_our_events_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+
+  &__content {
+    height: 20rem;
+    position: relative;
+
+    .display-2 {
+      font-size: 3rem;
+    }
+
+    .display-3 {
+      font-size: 2.5rem;
+      margin-top: -2.25rem;
+    }
+
+    @include media-breakpoint-up(md) { 
+      height: 32rem;
+
+      .display-2 {
+        font-size: 5.5rem;
+      }
+
+      .display-3 {
+        font-size: 4.5rem;
+        margin-top: -3.5rem;
+      }
+    }
+  }
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.5);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.related.products {
+  float: left;
+  position: relative;
+  width: 100%;
+
+  > h2 {
+    font-size: $h3-font-size;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.summary.entry-summary > h2 {
+  font-family: Comfortaa, sans-serif;
+  font-size: $h4-font-size;
+  text-transform: lowercase;
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary;
+}
+
+.woocommerce {
+  div.product {
+    .product_title {
+      letter-spacing: 2px;
+    }
+
+    .woocommerce-tabs .panel > h2 {
+      color: $white;
+      background-color: teal;
+      font-family: Comfortaa, sans-serif;
+      font-size: $h4-font-size;
+      letter-spacing: 4px;
+      line-height: 4rem;
+      margin-bottom: 2rem;
+      padding: 0;
+      text-align: center;
+      text-transform: lowercase;
+      width: 100%;
+    }
+
+    .woocommerce-tabs ul.tabs {
+      display: none;
+    }
+
+    p.price,
+    span.price {
+      color: $primary;
+      font-size: 1.5rem;
+    }
+
+    .product_title {
+      text-transform: uppercase;
+    }
+  }
+
+  ul.products li.product {
+    .price {
+      color: $primary;
+      font-size: $font-size-lg;
+      text-align: center;
+    }
+
+    .woocommerce-loop-category__title,
+    .woocommerce-loop-product__title,
+    h3 {
+      color: $secondary;
+      //font-family: Raleway, sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  form.login,
+  form.register {
+    margin: 0 0 2rem 0;
+  }
+
+  h2,
+  &-account .addresses .title h3,
+  &-additional-fields h3,
+  &-billing-fields h3,
+  &-MyAccount-content h3,
+  .woocommerce-order-details__title,
+  .woocommerce-column__title {
+    font-size: $h5-font-size;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &-input-wrapper {
+    width: 100%;
+  }
+}
+
+.woocommerce-products-header {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+  position: relative;
+  width: 100%;
+
+  &__title {
+    display: table-cell;
+    height: 16rem;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+
+    &--category {
+      color: $white;
+      background-color: $primary;
+    }
+
+    &--subcategory {
+      color: $secondary;
+      background-color: rgba($secondary, 0.05);
+    }
+
+    > .display-2 {
+      font-size: 3.5rem;
+    }
+
+    > .display-3 {
+      font-size: 3rem;
+      margin-top: -2.5rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      background-color: unset;
+      height: 20rem;
+      padding-right: 6rem;
+      text-align: right;
+
+      &--subcategory {
+        height: 32rem;
+      }
+
+      > .display-2 {
+        font-size: 5.5rem;
+      }
+
+      > .display-3 {
+        font-size: 4.5rem;
+        margin-top: -3.5rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &.alfajores {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-alfajores.png);
+    }
+
+    &.bombones {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-bombones.png);
+    }
+ 
+    &.budines {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-budines.png);
+    }
+
+    &.cajitas-dulces {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-cajitas-dulces.png);
+    }
+
+    &.cajas-saladas { 
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-cajas-saladas.png);
+    }
+
+    &.calentitos {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-calentitos.png);
+    }
+
+    &.cuadrados {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-cuadrados.png);
+    }
+
+    &.contacto {
+      background-image: url(/wp-content/themes/marchelo/img//contacto.png);
+    }
+
+    &.dulces {
+      background-image: url(/wp-content/themes/marchelo/img//category-dulces.png);
+    }
+
+    &.eventos {
+      background-image: url(/wp-content/themes/marchelo/img//category-eventos.png);
+    }
+
+    &.facturas {
+      background-image: url('/wp-content/themes/marchelo/img//subcategory-facturas.png');
+    }
+
+    &.frios {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-frios.png);
+    }
+
+    &.galletas {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-galletas.png);
+    }
+
+    &.mini-tortas {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-mini-tortas.png);
+    }
+
+    &.panaderia {
+      background-image: url(/wp-content/themes/marchelo/img//category-panaderia.png);
+    }
+
+    &.panes {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-panes.png);
+    }
+
+    &.pasteleria {
+      background-image: url(/wp-content/themes/marchelo/img//category-pasteleria.png);
+    }
+
+    &.salados {
+      background-image: url(/wp-content/themes/marchelo/img//category-salados.png);
+    }
+
+    &.tartas {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-tartas.png);
+    }
+
+    &.tortas {
+      background-image: url(/wp-content/themes/marchelo/img//subcategory-tortas.png);
+    }
+  }
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  //border: 2px solid darkgoldenrod;
+  padding: 0.5rem;
+}
+
+.woocommerce .cart-collaterals .cart_totals h2,
+.woocommerce-page .cart-collaterals .cart_totals h2 {
+  font-family: Comfortaa, sans-serif;
+}
+
+.woocommerce #content table.cart img,
+.woocommerce table.cart img,
+.woocommerce-page #content table.cart img,
+.woocommerce-page table.cart img {
+  width: 8rem;
+}
+
+.woocommerce-Input {
+  display: block;
+  width: 100%;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-size: $font-size-base;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @if $enable-rounded {
+    // Manually use the if/else instead of the mixin to account for iOS override
+    border-radius: $input-border-radius;
+  } @else {
+    // Otherwise undo the iOS default
+    border-radius: 0;
+  }
+
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus();
+
+  // Placeholder
+  &::placeholder {
+    color: $input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+  color: theme-color-level("primary", 6);
+  background-color: theme-color-level("primary", -9);
+}
+
+#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
+  color: $white;
+  background-color: $primary;
+}
+
+#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
+  border: 1em solid $primary;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}

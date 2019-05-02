@@ -42,10 +42,7 @@ $container = get_theme_mod('understrap_container_type');
         <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
 
         <nav class="navbar navbar-expand-md navbar-light bg-white">
-
-    <?php if ('container' == $container ) : ?>
-            <div class="container">
-    <?php endif; ?>
+            <div class="container-fluid">
 
                     <!-- Your site title as branding in the menu -->
 
@@ -60,12 +57,16 @@ $container = get_theme_mod('understrap_container_type');
             </a>
         <?php endif; ?><!-- end custom logo -->
 
+        <!--<div class="d-flex flex-row mx-auto">
+          <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
+        </div>-->
+
         <div class="d-flex flex-row mx-auto order-md-2">
           <ul class="navbar-nav flex-row">
             <li class="nav-item"><a class="nav-link px-2 text-primary" href="/my-account"><span class="fa fa-lg fa-user"></span></a></li>
             <li class="nav-item"><a class="nav-link px-2 text-primary" href="/cart"><span class="fa fa-lg fa-shopping-cart"></span></a></li>
-            <li class="nav-item"><a class="nav-link px-2 text-primary" href="//www.facebook.com/panymarchelo/" target="_blank"><span class="fa fa-lg fa-facebook"></span></a></li>
-            <li class="nav-item"><a class="nav-link px-2 text-primary" href="//www.instagram.com/panymarchelo/" target="_blank"><span class="fa fa-lg fa-instagram"></span></a></li>
+            <li class="nav-item"><a class="nav-link px-2 text-primary" href="//www.facebook.com/marchelopanaderia/" target="_blank"><span class="fa fa-lg fa-facebook"></span></a></li>
+            <li class="nav-item"><a class="nav-link px-2 text-primary" href="//www.instagram.com/marchelopanaderia/" target="_blank"><span class="fa fa-lg fa-instagram"></span></a></li>
           </ul>
         </div>
 
@@ -87,9 +88,7 @@ $container = get_theme_mod('understrap_container_type');
                     )
                 ); ?>
 
-    <?php if ('container' == $container ) : ?>
             </div><!-- .container -->
-    <?php endif; ?>
 
         </nav><!-- .site-navigation -->
 

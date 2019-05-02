@@ -23,7 +23,12 @@ get_header();
           <div class="home-carousel__item-content d-table w-100">
             <div class="align-middle d-table-cell text-center text-white">
               <h1 class="display-1 ff-comfortaa ls-8 text-primary">marchelo</h1>
-              <h2 class="display-3 ff-beyond-infinity">Panaderia y Pasteleria</h2>
+              <h2 class="display-3 ff-beyond-infinity mb-5">Panaderia y Pasteleria</h2>
+              <div class="row">
+                <div class="col-md-8 offset-md-2">
+                  <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -35,7 +40,12 @@ get_header();
           <div class="home-carousel__item-content d-table w-100">
             <div class="align-middle d-table-cell text-center text-white">
               <h1 class="display-1 ff-comfortaa ls-8 text-primary">marchelo</h1>
-              <h2 class="display-3 ff-beyond-infinity">Panaderia y Pasteleria</h2>
+              <h2 class="display-3 ff-beyond-infinity mb-5">Panaderia y Pasteleria</h2>
+              <div class="row">
+                <div class="col-md-8 offset-md-2">
+                  <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -47,7 +57,12 @@ get_header();
           <div class="home-carousel__item-content d-table w-100">
             <div class="align-middle d-table-cell text-center text-white">
               <h1 class="display-1 ff-comfortaa ls-8 text-primary">marchelo</h1>
-              <h2 class="display-3 ff-beyond-infinity">Panaderia y Pasteleria</h2>
+              <h2 class="display-3 ff-beyond-infinity mb-5">Panaderia y Pasteleria</h2>
+              <div class="row">
+                <div class="col-md-8 offset-md-2">
+                  <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -59,7 +74,12 @@ get_header();
           <div class="home-carousel__item-content d-table w-100">
             <div class="align-middle d-table-cell text-center text-white">
               <h1 class="display-1 ff-comfortaa ls-8 text-primary">marchelo</h1>
-              <h2 class="display-3 ff-beyond-infinity">Panaderia y Pasteleria</h2>
+              <h2 class="display-3 ff-beyond-infinity mb-5">Panaderia y Pasteleria</h2>
+              <div class="row">
+                <div class="col-md-8 offset-md-2">
+                  <?php if ( function_exists( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -75,24 +95,24 @@ get_header();
     </a>
   </div>
 
-  <div class="categories mb-md-5 p-5">
+  <div class="categories p-5">
     <h3 class="categories__title ff-raleway ls-4 mb-3 mb-md-5 text-uppercase">Nuestros Productos</h3>
     <div class="container categories-swiper" id="categories-swiper">
       <div class="swiper-wrapper categories-swiper__wrapper">
         <div class="categories-swiper__slide swiper-slide">
-          <img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/panificados.png">
+          <a href="/?product_cat=panaderia"><img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/panificados.png"></a>
           <a class="categories__link" href="/?product_cat=panaderia">Panaderia</a>
         </div>
         <div class="categories-swiper__slide swiper-slide">
-          <img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/pasteleria.png">
-          <a class="categories__link" href="/?product_cat=pasteleria">Pasteleria</a>
-        </div>
-        <div class="categories-swiper__slide swiper-slide">
-          <img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/dulces.png">
+          <a href="/?product_cat=dulces"><img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/dulces.png"></a>
           <a class="categories__link" href="/?product_cat=dulces">Dulces</a>
         </div>
         <div class="categories-swiper__slide swiper-slide">
-          <img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/salados.png">
+          <a href="/?product_cat=pasteleria"><img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/pasteleria.png"></a>
+          <a class="categories__link" href="/?product_cat=pasteleria">Pasteleria</a>
+        </div>
+        <div class="categories-swiper__slide swiper-slide">
+          <a href="/?product_cat=salados"><img class="categories__photo w-100" src="/wp-content/themes/marchelo/img/salados.png"></a>
           <a class="categories__link" href="/?product_cat=salados">Salados</a>
         </div>
       </div>
@@ -101,7 +121,7 @@ get_header();
     </div>
   </div>
 
-  <div class="our-events mb-md-5">
+  <div class="our-events mb-5">
     <div class="container">
       <div class="our-events__content d-table w-100">
         <div class="align-middle d-table-cell text-center text-white">
@@ -115,7 +135,7 @@ get_header();
     </div>
   </div>
 
-  <div class="how2buy mb-md-5 py-5">
+  <div class="how2buy">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -127,7 +147,7 @@ get_header();
         <div class="swiper-wrapper how2buy-swiper__wrapper">
           <div class="swiper-slide text-center">
             <img class="px-4 w-100" src="/wp-content/themes/marchelo/img/form_data.svg">
-            <p>Registrate</p>
+            <a href="/my-account">Registrate</a>
           </div>
           <div class="how2buy-swiper__slide swiper-slide text-center">
             <img class="px-4 w-100" src="/wp-content/themes/marchelo/img/shopping_cart.svg">
@@ -173,6 +193,12 @@ get_header();
       </div>
     </div>
   </div>
+<?php elseif(is_page(666)) : ?>
+    <?php if (have_posts() ) : while ( have_posts() ) : the_post();
+            the_content();
+    endwhile; else: ?>
+        <p>No hay contenido para mostrar :(</p>
+    <?php endif; ?>
 <?php endif; ?>
 
 <?php get_footer(); ?>

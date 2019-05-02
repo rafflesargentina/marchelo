@@ -24,5 +24,5 @@ if (! defined('ABSPATH') ) {
 ?>
 
 <a href="<?php echo esc_url(wc_get_checkout_url());?>" class="btn btn-primary btn-lg btn-block text-white">
-    <?php esc_html_e('Proceder al checkout', 'understrap'); ?>
+    <?php esc_html_e('Proceder a la caja', 'understrap'); ?>
 </a>

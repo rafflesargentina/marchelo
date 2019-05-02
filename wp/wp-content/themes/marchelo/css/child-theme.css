@@ -11137,10 +11137,26 @@ h1, h2, h3, h4, h5, h6,
   font-family: Raleway, sans-serif;
   font-weight: 700; }
 
+.aws-container .aws-search-field,
+.aws-container .aws-search-field:focus {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #000; }
+
+.aws-container .aws-search-form .aws-form-btn {
+  background-color: #72cec5;
+  border: none; }
+
+.aws-container .aws-search-form .aws-search-btn_icon {
+  color: #fff; }
+
+.aws-container[data-show-page="false"] .aws-search-form .aws-search-btn:hover {
+  background: #72cec5; }
+
 .bg-teal {
   background-color: teal; }
 
-.color-teal {
+.text-teal {
   color: teal; }
 
 .entry-header > h1, .entry-header h2, .entry-header h3 {
@@ -11182,6 +11198,9 @@ h1, h2, h3, h4, h5, h6,
 .fw-900 {
   font-weight: 900; }
 
+.ls-2 {
+  letter-spacing: 2px; }
+
 .ls-4 {
   letter-spacing: 4px; }
 
@@ -11209,13 +11228,13 @@ h1, h2, h3, h4, h5, h6,
           font-size: 4.5rem;
           margin-top: -3.5rem; } }
   .home-carousel__item--one {
-    background-image: url(/wp-content/themes/marchelo/img//category-panaderia.png); }
+    background-image: url(/wp-content/themes/marchelo/img/category-panaderia.png); }
   .home-carousel__item--two {
-    background-image: url(/wp-content/themes/marchelo/img//category-pasteleria.png); }
+    background-image: url(/wp-content/themes/marchelo/img/category-pasteleria.png); }
   .home-carousel__item--three {
-    background-image: url(/wp-content/themes/marchelo/img//category-dulces.png); }
+    background-image: url(/wp-content/themes/marchelo/img/category-dulces.png); }
   .home-carousel__item--four {
-    background-image: url(/wp-content/themes/marchelo/img//category-salados.png); }
+    background-image: url(/wp-content/themes/marchelo/img/category-salados.png); }
 
 .categories {
   position: relative; }
@@ -11223,10 +11242,13 @@ h1, h2, h3, h4, h5, h6,
     color: #000;
     display: block;
     font-family: 'Beyond Infinity', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     text-decoration: none;
     width: 100%; }
+    @media (min-width: 768px) {
+      .categories__link {
+        font-size: 3rem; } }
     .categories__link:hover {
       color: #000;
       text-decoration: none; }
@@ -11238,7 +11260,8 @@ h1, h2, h3, h4, h5, h6,
   .categories__title {
     text-align: center;
     width: 100%; }
-  .categories:hover__photo, .categories:hover__link {
+  .categories-swiper__slide:hover .categories__photo,
+  .categories-swiper__slide:hover .categories__link {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
     -webkit-transition: .5s ease-in-out;
@@ -11247,19 +11270,6 @@ h1, h2, h3, h4, h5, h6,
 .contact {
   height: 32rem;
   position: relative; }
-
-.events-price {
-  color: teal; }
-
-.events-subtitle {
-  color: teal;
-  font-family: Comfortaa, sans-serif; }
-
-.events-list li > span {
-  color: teal; }
-
-.events-p {
-  color: teal; }
 
 .how2buy {
   min-height: 20rem;
@@ -11270,7 +11280,7 @@ h1, h2, h3, h4, h5, h6,
   background-color: rgba(184, 134, 11, 0.05); }
 
 .our-events {
-  background-image: url(/wp-content/themes/marchelo/img//home_our_events_bg.png);
+  background-image: url(/wp-content/themes/marchelo/img/home_our_events_bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11307,18 +11317,25 @@ h1, h2, h3, h4, h5, h6,
   width: 100%; }
   .related.products > h2 {
     font-size: 1.75rem;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin-bottom: 1.5rem;
     text-align: center;
     text-transform: uppercase; }
 
 .summary.entry-summary > h2 {
+  display: none;
   font-family: Comfortaa, sans-serif;
   font-size: 1.5rem;
   text-transform: lowercase; }
 
 .swiper-pagination-bullet-active {
   background: #72cec5; }
+
+.woocommerce-message {
+  border-top-color: teal; }
+
+.woocommerce-message::before {
+  color: teal; }
 
 .woocommerce div.product .product_title {
   letter-spacing: 2px; }
@@ -11363,7 +11380,7 @@ h1, h2, h3, h4, h5, h6,
 .woocommerce form.register {
   margin: 0 0 2rem 0; }
 
-.woocommerce h2,
+.woocommerce #customer_login h2,
 .woocommerce-account .addresses .title h3,
 .woocommerce-additional-fields h3,
 .woocommerce-billing-fields h3,
@@ -11417,45 +11434,51 @@ h1, h2, h3, h4, h5, h6,
           margin-top: -3.5rem; } }
   @media (min-width: 768px) {
     .woocommerce-products-header.alfajores {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-alfajores.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-alfajores.png); }
     .woocommerce-products-header.bombones {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-bombones.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-bombones.png); }
     .woocommerce-products-header.budines {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-budines.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-budines.png); }
     .woocommerce-products-header.cajitas-dulces {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-cajitas-dulces.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-cajitas-dulces.png); }
     .woocommerce-products-header.cajas-saladas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-cajas-saladas.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-cajas-saladas.png); }
     .woocommerce-products-header.calentitos {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-calentitos.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-calentitos.png); }
     .woocommerce-products-header.cuadrados {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-cuadrados.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-cuadrados.png); }
     .woocommerce-products-header.contacto {
-      background-image: url(/wp-content/themes/marchelo/img//contacto.png); }
+      background-image: url(/wp-content/themes/marchelo/img/contacto.png); }
     .woocommerce-products-header.dulces {
-      background-image: url(/wp-content/themes/marchelo/img//category-dulces.png); }
+      background-image: url(/wp-content/themes/marchelo/img/category-dulces.png); }
     .woocommerce-products-header.eventos {
-      background-image: url(/wp-content/themes/marchelo/img//category-eventos.png); }
+      background-image: url(/wp-content/themes/marchelo/img/category-eventos.png); }
     .woocommerce-products-header.facturas {
-      background-image: url("/wp-content/themes/marchelo/img//subcategory-facturas.png"); }
+      background-image: url("/wp-content/themes/marchelo/img/subcategory-facturas.png"); }
     .woocommerce-products-header.frios {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-frios.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-frios.png); }
     .woocommerce-products-header.galletas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-galletas.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-galletas.png); }
+    .woocommerce-products-header.masas {
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-masas.png); }
     .woocommerce-products-header.mini-tortas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-mini-tortas.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-mini-tortas.png); }
+    .woocommerce-products-header.muffins {
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-muffins.png); }
     .woocommerce-products-header.panaderia {
-      background-image: url(/wp-content/themes/marchelo/img//category-panaderia.png); }
+      background-image: url(/wp-content/themes/marchelo/img/category-panaderia.png); }
     .woocommerce-products-header.panes {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-panes.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-panes.png); }
     .woocommerce-products-header.pasteleria {
-      background-image: url(/wp-content/themes/marchelo/img//category-pasteleria.png); }
+      background-image: url(/wp-content/themes/marchelo/img/category-pasteleria.png); }
+    .woocommerce-products-header.pizzas-y-empanadas {
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-pizzas-y-empanadas.png); }
     .woocommerce-products-header.salados {
-      background-image: url(/wp-content/themes/marchelo/img//category-salados.png); }
+      background-image: url(/wp-content/themes/marchelo/img/category-salados.png); }
     .woocommerce-products-header.tartas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-tartas.png); }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-tartas.png); }
     .woocommerce-products-header.tortas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-tortas.png); } }
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-tortas.png); } }
 
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {

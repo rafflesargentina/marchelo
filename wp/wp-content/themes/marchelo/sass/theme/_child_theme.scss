@@ -9,11 +9,35 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 700;
 }
 
+.aws-container {
+  .aws-search-field,
+  .aws-search-field:focus {
+    background: rgba(255,255,255,0.8);
+    border: none;
+    color: $black;
+  }
+
+  .aws-search-form {
+    .aws-form-btn {
+      background-color: $primary; 
+      border: none;
+    }
+
+    .aws-search-btn_icon {
+      color: $white;
+    }
+  }
+}
+
+.aws-container[data-show-page="false"] .aws-search-form .aws-search-btn:hover {
+  background: $primary;
+}
+
 .bg-teal {
   background-color: teal;
 }
 
-.color-teal {
+.text-teal {
   color: teal;
 }
 
@@ -67,6 +91,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 900;
 }
 
+.ls-2 {
+  letter-spacing: 2px;
+}
+
 .ls-4 {
   letter-spacing: 4px;
 }
@@ -105,19 +133,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     }
 
     &--one {
-      background-image: url(/wp-content/themes/marchelo/img//category-panaderia.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-panaderia.png);
     }
   
     &--two {
-      background-image: url(/wp-content/themes/marchelo/img//category-pasteleria.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-pasteleria.png);
     }
   
     &--three {
-      background-image: url(/wp-content/themes/marchelo/img//category-dulces.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-dulces.png);
     }
   
     &--four {
-      background-image: url(/wp-content/themes/marchelo/img//category-salados.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-salados.png);
     }
   }
 }
@@ -129,10 +157,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $black;
     display: block;
     font-family: 'Beyond Infinity', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     text-decoration: none;
     width: 100%;
+    @include media-breakpoint-up(md) {
+        font-size: 3rem;
+    }
     &:hover {
       color: $black;
       text-decoration: none;
@@ -150,9 +181,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     width: 100%;
   }
 
-  &:hover {
-    &__photo,
-    &__link {
+  &-swiper__slide:hover {
+    .categories__photo,
+    .categories__link {
       transform: scale(1.2);
       transition: .5s ease-in-out;
     }
@@ -162,27 +193,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .contact {
   height: 32rem;
   position: relative;
-}
-
-.events {
-  &-price {
-    color: teal;
-  }
-
-  &-subtitle {
-    color: teal;
-    font-family: Comfortaa, sans-serif;
-  }
-
-  &-list {
-    li > span {
-      color: teal;
-    }
-  }
-
-  &-p {
-    color: teal;
-  }
 }
 
 .how2buy {
@@ -196,7 +206,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .our-events {
-  background-image: url(/wp-content/themes/marchelo/img//home_our_events_bg.png);
+  background-image: url(/wp-content/themes/marchelo/img/home_our_events_bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -247,7 +257,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
   > h2 {
     font-size: $h3-font-size;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin-bottom: 1.5rem;
     text-align: center;
     text-transform: uppercase;
@@ -255,6 +265,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .summary.entry-summary > h2 {
+  display: none;
   font-family: Comfortaa, sans-serif;
   font-size: $h4-font-size;
   text-transform: lowercase;
@@ -265,6 +276,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .woocommerce {
+
+  &-message {
+    border-top-color: teal;
+  }
+
+  &-message::before {
+    color: teal;
+  }
+
   div.product {
     .product_title {
       letter-spacing: 2px;
@@ -321,7 +341,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0 0 2rem 0;
   }
 
-  h2,
+  #customer_login h2,
   &-account .addresses .title h3,
   &-additional-fields h3,
   &-billing-fields h3,
@@ -396,83 +416,95 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
   @include media-breakpoint-up(md) {
     &.alfajores {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-alfajores.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-alfajores.png);
     }
 
     &.bombones {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-bombones.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-bombones.png);
     }
  
     &.budines {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-budines.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-budines.png);
     }
 
     &.cajitas-dulces {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-cajitas-dulces.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-cajitas-dulces.png);
     }
 
     &.cajas-saladas { 
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-cajas-saladas.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-cajas-saladas.png);
     }
 
     &.calentitos {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-calentitos.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-calentitos.png);
     }
 
     &.cuadrados {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-cuadrados.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-cuadrados.png);
     }
 
     &.contacto {
-      background-image: url(/wp-content/themes/marchelo/img//contacto.png);
+      background-image: url(/wp-content/themes/marchelo/img/contacto.png);
     }
 
     &.dulces {
-      background-image: url(/wp-content/themes/marchelo/img//category-dulces.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-dulces.png);
     }
 
     &.eventos {
-      background-image: url(/wp-content/themes/marchelo/img//category-eventos.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-eventos.png);
     }
 
     &.facturas {
-      background-image: url('/wp-content/themes/marchelo/img//subcategory-facturas.png');
+      background-image: url('/wp-content/themes/marchelo/img/subcategory-facturas.png');
     }
 
     &.frios {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-frios.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-frios.png);
     }
 
     &.galletas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-galletas.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-galletas.png);
+    }
+
+    &.masas {
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-masas.png);
     }
 
     &.mini-tortas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-mini-tortas.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-mini-tortas.png);
+    }
+
+    &.muffins {
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-muffins.png);
     }
 
     &.panaderia {
-      background-image: url(/wp-content/themes/marchelo/img//category-panaderia.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-panaderia.png);
     }
 
     &.panes {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-panes.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-panes.png);
     }
 
     &.pasteleria {
-      background-image: url(/wp-content/themes/marchelo/img//category-pasteleria.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-pasteleria.png);
+    }
+
+    &.pizzas-y-empanadas {
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-pizzas-y-empanadas.png);
     }
 
     &.salados {
-      background-image: url(/wp-content/themes/marchelo/img//category-salados.png);
+      background-image: url(/wp-content/themes/marchelo/img/category-salados.png);
     }
 
     &.tartas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-tartas.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-tartas.png);
     }
 
     &.tortas {
-      background-image: url(/wp-content/themes/marchelo/img//subcategory-tortas.png);
+      background-image: url(/wp-content/themes/marchelo/img/subcategory-tortas.png);
     }
   }
 }
